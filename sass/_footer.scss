@@ -1,0 +1,19 @@
+footer {
+    width: 100%;
+    height: 8rem;
+    border-top: .1rem solid $light_green_op_3;
+    background-color: $dark_grey;
+
+    .footer-wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-size: 1.4rem;
+            color: $white_op_5;
+        }
+    }
+}

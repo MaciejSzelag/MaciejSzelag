@@ -1,0 +1,218 @@
+header {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    // .loader {
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100vh;
+    // }
+
+    /* HTML: <div class="loader"></div> */
+
+    .letter {
+        display: inline-block;
+
+    }
+
+    .header-wrap {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h1,
+        h3,
+        p {
+            text-transform: uppercase;
+            text-align: center;
+            opacity: 0;
+            animation: show-off 1s linear 2s 1 both;
+        }
+
+        .header-h1 {
+            font-size: 6rem;
+            color: rgba(230, 230, 230, 0.979);
+            margin: 2rem 0;
+            padding: 0 8rem;
+            -webkit-text-fill-color: #18181800;
+            -webkit-text-stroke: .1rem $light_green_op_8;
+        }
+
+        .header-h3,
+        .header-p {
+            font-weight: 200;
+            color: $light_grey;
+        }
+
+        .header-h3 {
+            font-size: 2rem;
+
+        }
+
+        .header-p {
+            font-size: 2.1rem;
+            color: $light_green_op_3;
+
+        }
+
+        .scroll-d {
+            margin-top: 8rem;
+            font-size: 1.2rem;
+            padding: 2rem 3rem;
+            font-weight: 100;
+
+            a {
+                display: block;
+                text-decoration: none;
+                font-size: 1.8rem;
+
+                .span-in {
+                    font-size: 3rem;
+                    margin: 0 3rem;
+
+                }
+            }
+
+        }
+    }
+}
+
+.page-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(17, 17, 17);
+    z-index: -1;
+
+    .sqr {
+        position: absolute;
+        width: 80vh;
+        height: 80vh;
+        // border: .1rem solid rgba(255, 255, 255, 0.089);
+        border: .1rem solid rgba(0, 255, 179, 0.247);
+        ;
+        border-radius: 1rem;
+        box-shadow: 0 0 3rem .3rem rgba(0, 255, 179, 0.199);
+        z-index: -1;
+
+    }
+
+    .sqr:nth-child(1) {
+        top: -50%;
+        right: -10%;
+        transform: rotate(48deg);
+        animation: rotate-object 10s 6s ease-in-out infinite both;
+    }
+
+    .sqr:nth-child(2) {
+        top: 60%;
+        left: -20%;
+        transform: rotate(28deg);
+        animation: rotate-object-2 10s 8s ease-in-out infinite both;
+    }
+
+    // .sqr:nth-child(3) {
+    //     width: 150vh;
+    //     height: 80vh;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     background-color: rgb(17, 17, 17);
+    //     ;
+    // }
+
+    // .sqr:nth-child(1) {
+    //     top: 50%;
+    //     right: -30%;
+    // }
+
+}
+
+
+
+@media(min-width:1024px) {
+    header {
+        width: 100%;
+        height: 100vh;
+
+        .header-wrap {
+            .header-h1 {
+                color: white;
+                text-shadow: 0 0 1rem rgba(0, 0, 0, 0);
+                // filter: drop-shadow(.6rem -.6rem .1rem rgba(0, 255, 179, 0.514));
+                font-size: 12rem;
+
+                // mask-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
+            }
+
+
+
+            .header-h3,
+            .header-p {
+                font-size: 2rem;
+
+            }
+
+
+        }
+    }
+}
+
+@keyframes rotate-object {
+    0% {
+        opacity: 0;
+        transform: rotate(42deg);
+        border-radius: 2rem;
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(80deg);
+        // border-radius: 50%;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(42deg);
+        border-radius: 2rem;
+    }
+}
+
+@keyframes rotate-object-2 {
+    0% {
+        opacity: 0;
+        transform: rotate(28deg);
+        border-radius: 2rem;
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(56deg);
+        // border-radius: 50%;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(28deg);
+        border-radius: 2rem;
+    }
+}
+
+@keyframes show-off {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1
+    }
+
+}
